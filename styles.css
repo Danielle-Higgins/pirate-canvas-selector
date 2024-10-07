@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;0,800;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pirata+One&family=Poppins:ital,wght@0,300;0,400;0,500;0,700;0,800;1,700;1,800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Base Syles */
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Main Background */
+.bg-image {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./img/luffy_background.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ----- Header Styles ----- */
+header {
+  padding: 20px 0;
+}
+
+header .title {
+  background-color: rgba(141, 27, 17, 0.9);
+  width: 700px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-family: "Pirata One", Arial, Helvetica, sans-serif;
+  letter-spacing: 7px;
+  text-align: center;
+}
+
+/* ----- BG Picker Styles ----- */
+section {
+  padding: 20px 0 90px;
+}
+
+.bg-picker {
+  padding: 10px;
+
+  display: flex;
+  gap: 10px;
+}
+
+.bg-picker > * {
+  flex: 1;
+  /* border: 1px solid red; */
+}
+
+.characters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.character {
+  width: 150px;
+  height: 150px;
+  background-color: rgb(118, 69, 26);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.character:hover,
+.character:active {
+  background-color: rgb(204, 51, 40);
+  transform: scale(1.1);
+}
+
+.char-bg {
+  width: 100%;
+  min-height: 500px;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+  /* border: 1px solid white; */
+}
+
+/* ----- Media Queries ----- */
+@media screen and (max-width: 1300px) {
+  .bg-picker {
+    flex-direction: column;
+  }
+
+  .char-bg {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  header .title {
+    max-width: 100%;
+  }
+}
